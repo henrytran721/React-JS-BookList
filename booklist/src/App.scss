@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:300&display=swap');
+
+$colors: (
+  teal: #9370DB,
+  white: #fff,
+  aqua: #E6E6FA
+);
+
+$font-stack: "Roboto Mono", monospace;
+
+@function returnColor($chosenColor) {
+  @return map-get($colors, $chosenColor);
+}
+
+body {
+  margin: 0;
+  //position: relative;
+  background-color: returnColor(teal);
+}
+
+header {
+  display: flex;
+  justify-content: center;
+
+  h1 {
+    color: returnColor(white);
+    font-family: $font-stack;
+  }
+}
+
+main {
+  margin: 5% 8%;
+  padding: 0 10%;
+
+  .addButton {
+    background: none;
+    border: none;
+    color: returnColor(teal);
+    background-color: returnColor(aqua);
+    height: 50px;
+    width: 150px;
+    font-family: $font-stack;
+    font-size: 1em;
+    border-radius: 8px;
+
+    .addSymbol {
+      margin: 0 10% 0 0;
+      font-size: 1.5em;
+    }
+  }
+}
+
+
+.body {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+.noBook {
+  color: returnColor(white);
+  font-family: $font-stack;
+  margin: 10%;
+  text-align: center;
+  width: 80%;
+  height: 150px;
+  background-color: darken(returnColor(teal), 10%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.background {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.addBookForm {
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  width: 50vw;
+
+  .bookInfo {
+    width: 80%;
+    height: 275px;
+    background-color: white;
+    font-family: $font-stack;
+    margin: 5% 0;
+    position: absolute;
+    z-index: 10;
+    border-radius: 5px;
+    border: 10px solid darken(returnColor(teal), 10%);
+
+    .bookHeader {
+      background-color: returnColor(teal);
+      height: 30px;
+      display: flex;
+      align-items: center;
+      color: returnColor(white);
+      p {
+        margin: 0;
+      }
+    }
+
+    .bookNameInput {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: returnColor(teal);
+
+      input[type=text], input[type=number] {
+        border: 1px solid returnColor(teal);
+        margin: 0 5%;
+        height: 20px;
+        width: 200px;
+      }
+    }
+
+      .btns {
+        display: flex;
+        justify-content: flex-end;
+
+        button:first-child {
+          margin-right: 0;
+        }
+        button
+        {
+        background: none;
+        border: none;
+        color: returnColor(white);
+        background-color: returnColor(teal);
+        margin: 5% 4%;
+        height: 25px;
+        font-family: $font-stack;
+        }
+      }
+  }
+}
