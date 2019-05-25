@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:300&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:300,500&display=swap");
 body {
   margin: 0;
   background-color: #9370DB; }
@@ -8,7 +8,8 @@ header {
   justify-content: center; }
   header h1 {
     color: #fff;
-    font-family: "Roboto Mono", monospace; }
+    font-family: "Roboto Mono", monospace;
+    font-weight: lighter; }
 
 main {
   margin: 5% 8%;
@@ -21,6 +22,7 @@ main {
     height: 50px;
     width: 150px;
     font-family: "Roboto Mono", monospace;
+    font-weight: lighter;
     font-size: 1em;
     border-radius: 8px; }
     main .addButton .addSymbol {
@@ -36,6 +38,7 @@ main {
 .noBook {
   color: #fff;
   font-family: "Roboto Mono", monospace;
+  font-weight: lighter;
   margin: 10%;
   text-align: center;
   width: 80%;
@@ -52,14 +55,16 @@ main {
 
 .addBookForm {
   position: absolute;
-  top: 20%;
+  top: 0;
   left: 30%;
-  width: 50vw; }
+  width: 50vw;
+  transition: transform 300ms; }
   .addBookForm .bookInfo {
     width: 80%;
     height: 275px;
     background-color: white;
     font-family: "Roboto Mono", monospace;
+    font-weight: lighter;
     margin: 5% 0;
     position: absolute;
     z-index: 10;
@@ -75,12 +80,12 @@ main {
         margin: 0; }
     .addBookForm .bookInfo .bookNameInput {
       display: flex;
-      justify-content: center;
+      justify-content: space-around;
       align-items: center;
       color: #9370DB; }
       .addBookForm .bookInfo .bookNameInput input[type=text], .addBookForm .bookInfo .bookNameInput input[type=number] {
         border: 1px solid #9370DB;
-        margin: 0 5%;
+        margin: 0 3%;
         height: 20px;
         width: 200px; }
     .addBookForm .bookInfo .btns {
@@ -95,4 +100,42 @@ main {
         background-color: #9370DB;
         margin: 5% 4%;
         height: 25px;
-        font-family: "Roboto Mono", monospace; }
+        font-family: "Roboto Mono", monospace;
+        font-weight: lighter; }
+
+.bookContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.deleteBtn {
+  border: none;
+  background: none;
+  position: absolute;
+  color: red;
+  font-size: 1.5em;
+  top: 0;
+  right: 2px; }
+  .deleteBtn:hover {
+    opacity: 0.6; }
+
+.bookListDiv {
+  width: 80%;
+  height: 150px;
+  background-color: #fff;
+  border: 10px solid #7447d1;
+  margin-top: 10%;
+  border-radius: 15px;
+  font-family: "Roboto Mono", monospace;
+  font-weight: lighter;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; }
+  .bookListDiv .bookName, .bookListDiv .authorName, .bookListDiv .pageNum {
+    display: flex;
+    padding: 10px;
+    justify-content: center; }
+    .bookListDiv .bookName p, .bookListDiv .authorName p, .bookListDiv .pageNum p {
+      margin: 0;
+      color: #7447d1; }
