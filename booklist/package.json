@@ -1,7 +1,7 @@
 {
   "name": "booklist",
   "version": "0.1.0",
-  "homepage": "https://henrytran721.github.io/React-JS-BookList",
+  "homepage": "http://henryhtran.com/React-JS-BookList/",
   "private": true,
   "dependencies": {
     "gh-pages": "^2.0.1",
